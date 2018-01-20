@@ -27,7 +27,8 @@ Once your subscription is active, run the following 4 commands:
 git clone git@github.com:paragonie/ward.git
 cd ward
 git tag -v stable && git checkout stable
-sudo ./deploy.sh
+LICENSEKEY="license key goes here"
+sudo ./deploy.sh "$LICENSEKEY"
 ```
 
 This will kickoff the setup procedure, setup the cron jobs, and initialize the database.
