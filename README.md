@@ -32,6 +32,7 @@ sudo ./deploy.sh "$LICENSEKEY"
 ```
 
 This will kickoff the setup procedure, setup the cron jobs, and initialize the database.
+You may have to restart your webserver (Apache, nginx, etc.) for the WAF to take effect.
 
 ## Adding a Site to Ward's Scope
 
