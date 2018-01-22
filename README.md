@@ -21,14 +21,19 @@ To install Ward, first you need to have [an active subscription](https://ward.pa
 After subscribing, you will be asked to provide an SSH public key, which will grant you
 read-only access to the Ward repository.
 
+Next, you'll want to import our GPG public key, which we use to sign our tags.
+
+```bash
+gpg  --keyserver pgp.mit.edu --recv-keys 7F52D5C61D1255C731362E826B97A1C2826404DA
+```
+
 Once your subscription is active, run the following 4 commands:
 
 ```bash
 git clone git@github.com:paragonie/ward.git
 cd ward
 git tag -v stable && git checkout stable
-LICENSEKEY="license key goes here"
-sudo ./deploy.sh "$LICENSEKEY"
+sudo ./deploy.sh "license key goes here"
 ```
 
 This will kickoff the setup procedure, setup the cron jobs, and initialize the database.
